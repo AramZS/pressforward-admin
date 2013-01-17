@@ -11,6 +11,12 @@ input[type=text] {
   height: auto;
 }
 
+input[type=checkbox] {
+  margin-right: 5px;
+  display:inline;
+  vertical-align:top;
+}
+
 #app-banner {
   background: rgba(0,0,0,0.025);
   border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -66,6 +72,12 @@ input[type=text] {
   }
 }
 
+.display {
+  @include clearfix;
+  width: 100%;
+  display:block;
+}
+
 #tools {
   float:right;
   width: 25%;
@@ -99,6 +111,10 @@ input[type=text] {
     font-weight:bold;
   }
 
+  article {
+    @include adjust-font-size-to(14px);
+  }
+
   .grid & {
     article {
       float:left;
@@ -106,16 +122,39 @@ input[type=text] {
       height: 300px;
       margin-right: 2%;
       margin-bottom: 2%;
+      border: 1px dotted #ccc;
+      padding: 2%;
+      background: #fafafa;
 
-      h1 {
-        @include adjust-font-size-to(24px);
+      &:hover {
+        background: #fff;
       }
 
       header {
         @include clearfix;
         margin-bottom:1.5em;
+        h1 {
+          @include adjust-font-size-to(18px);
+        }
       }
 
+      &.open {
+      @include adjust-font-size-to(16px);
+        float:none;
+        width: 100%;
+        height:auto;
+        margin-right:0;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 2em;
+
+        h1 {
+          @include adjust-font-size-to(28px);
+        }
+
+        .content {
+          margin-bottom: rhythm(1);
+        }
+      }
     }
   }
 
@@ -132,7 +171,7 @@ input[type=text] {
         width: 25%;
         h1 {
           @include adjust-font-size-to(16px);
-          margin:0 0 rhythm(0.5);
+          margin-top:0;
         }
       }
 
@@ -147,6 +186,27 @@ input[type=text] {
         display:inline;
         float:left;
         width: 20%;
+      }
+
+      &.open {
+      @include adjust-font-size-to(16px);
+
+        header,
+        .content,
+        footer {
+          display:block;
+          float:none;
+          width: auto;
+          margin:0;
+        }
+
+        header {
+        margin-bottom:1.5em;
+        }
+
+        h1 {
+          @include adjust-font-size-to(28px);
+        }
       }
     }
   }

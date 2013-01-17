@@ -2112,7 +2112,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url('images/glyphicons-halflings.png?1358125307');
+  background-image: url('/images/glyphicons-halflings.png?1358125307');
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -2132,7 +2132,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url('images/glyphicons-halflings-white.png');
+  background-image: url('/images/glyphicons-halflings-white.png');
 }
 
 .icon-glass {
@@ -5711,6 +5711,12 @@ a.label:hover, a.badge:hover {
     height: auto;
   }
 
+  input[type=checkbox] {
+    margin-right: 5px;
+    display: inline;
+    vertical-align: top;
+  }
+
   #app-banner {
     background: rgba(0, 0, 0, 0.025);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -5759,6 +5765,13 @@ a.label:hover, a.badge:hover {
     display: none;
   }
 
+  .display {
+    overflow: hidden;
+    *zoom: 1;
+    width: 100%;
+    display: block;
+  }
+
   #tools {
     float: right;
     width: 25%;
@@ -5791,21 +5804,48 @@ a.label:hover, a.badge:hover {
     color: #999;
     font-weight: bold;
   }
+  #entries article {
+    font-size: 0.875em;
+    line-height: 2em;
+  }
   .grid #entries article {
     float: left;
     width: 30%;
     height: 300px;
     margin-right: 2%;
     margin-bottom: 2%;
+    border: 1px dotted #cccccc;
+    padding: 2%;
+    background: #fafafa;
   }
-  .grid #entries article h1 {
-    font-size: 1.5em;
-    line-height: 1.16667em;
+  .grid #entries article:hover {
+    background: #fff;
   }
   .grid #entries article header {
     overflow: hidden;
     *zoom: 1;
     margin-bottom: 1.5em;
+  }
+  .grid #entries article header h1 {
+    font-size: 1.125em;
+    line-height: 1.55556em;
+  }
+  .grid #entries article.open {
+    font-size: 1em;
+    line-height: 1.75em;
+    float: none;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    border-bottom: 1px dotted #cccccc;
+    padding-bottom: 2em;
+  }
+  .grid #entries article.open h1 {
+    font-size: 1.75em;
+    line-height: 2em;
+  }
+  .grid #entries article.open .content {
+    margin-bottom: 1.75em;
   }
   .list #entries article {
     border-bottom: 1px dotted #cccccc;
@@ -5822,7 +5862,7 @@ a.label:hover, a.badge:hover {
   .list #entries article header h1 {
     font-size: 1em;
     line-height: 1.75em;
-    margin: 0 0 0.875em;
+    margin-top: 0;
   }
   .list #entries article .content {
     display: inline;
@@ -5834,5 +5874,24 @@ a.label:hover, a.badge:hover {
     display: inline;
     float: left;
     width: 20%;
+  }
+  .list #entries article.open {
+    font-size: 1em;
+    line-height: 1.75em;
+  }
+  .list #entries article.open header,
+  .list #entries article.open .content,
+  .list #entries article.open footer {
+    display: block;
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+  .list #entries article.open header {
+    margin-bottom: 1.5em;
+  }
+  .list #entries article.open h1 {
+    font-size: 1.75em;
+    line-height: 2em;
   }
 }
