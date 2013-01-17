@@ -1,0 +1,153 @@
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  margin:0;
+}
+
+input[type=text] {
+  padding: 2px 4px;
+  height: auto;
+}
+
+#app-banner {
+  background: rgba(0,0,0,0.025);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  @include clearfix;
+
+  padding: 20px 40px;
+
+  * {
+    margin:0;
+  }
+
+  .title {
+    float:left;
+  }
+
+  h1 {
+    margin:0;
+    display:inline;
+    font-size: 14px;
+
+    &:after {
+      content: " · ";
+      color: #999;
+    }
+  }
+
+  h1,
+  .refresh {
+    font-size: 14px;
+    line-height:1em;
+    margin:0;
+  }
+  ul {
+    float:right;
+    text-align:right;
+    display:inline;
+    li {
+      display:inline;
+    }
+  }
+
+  form {
+    float:right;
+    display:inline;
+    text-align:right;
+    * {
+      display:inline;
+    }
+    label {
+      display:none;
+    }
+
+  }
+}
+
+#tools {
+  float:right;
+  width: 25%;
+  padding: 40px;
+
+  h2 {
+    @include adjust-font-size-to(18px);
+  }
+
+  #settings {
+    display:block;
+    text-decoration:none;
+    @include adjust-font-size-to(18px);
+    font-weight:bold;
+  }
+}
+
+#entries {
+  float:left;
+  width: 75%;
+  padding: 40px;
+
+  .display {
+    @include clearfix;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    font-size: 87.5%;
+    color: #999;
+    font-weight:bold;
+  }
+
+  .grid & {
+    article {
+      float:left;
+      width: 30%;
+      height: 300px;
+      margin-right: 2%;
+      margin-bottom: 2%;
+
+      h1 {
+        @include adjust-font-size-to(24px);
+      }
+
+      header {
+        @include clearfix;
+        margin-bottom:1.5em;
+      }
+
+    }
+  }
+
+  .list & {
+    article {
+      border-bottom:1px dotted #ccc;
+      margin:0;
+      padding: 10px 0;
+      @include clearfix;
+
+      header {
+        display:inline;
+        float:left;
+        width: 25%;
+        h1 {
+          @include adjust-font-size-to(16px);
+          margin:0 0 rhythm(0.5);
+        }
+      }
+
+      .content {
+        display:inline;
+        float:left;
+        width: 50%;
+        margin: 0 2%;
+      }
+
+      footer {
+        display:inline;
+        float:left;
+        width: 20%;
+      }
+    }
+  }
+}

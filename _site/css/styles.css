@@ -1,0 +1,172 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Susy Variables */
+@media screen {
+  html {
+    font-size: 100%;
+    line-height: 1.75em;
+  }
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  html {
+    background-color: white;
+  }
+
+  body {
+    *zoom: 1;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: Cambria, Georgia, Times, serif;
+    color: #333;
+  }
+  body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  h1 {
+    font-size: 1.875em;
+    line-height: 1.86667em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.16667em;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: square;
+    margin-left: 1.75em;
+  }
+
+  p, ul, ol, dl {
+    margin-bottom: 1.75em;
+  }
+
+  header[role="banner"] {
+    padding-left: 8.69565%;
+    padding-right: 8.69565%;
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  header[role="banner"] h1 {
+    font-size: 1em;
+    line-height: 1.75em;
+    margin: 0;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  header[role="banner"] hgroup {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+    display: inline;
+  }
+
+  #primary-nav {
+    overflow: hidden;
+    *zoom: 1;
+    padding-left: 8.69565%;
+    padding-right: 8.69565%;
+    padding-top: 0.875em;
+    font-size: 0.875em;
+    line-height: 2em;
+  }
+  #primary-nav ul {
+    margin-left: 0;
+  }
+  #primary-nav li {
+    display: inline;
+  }
+  #primary-nav li + li:before {
+    content: "| ";
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  div[role="main"] {
+    overflow: hidden;
+    *zoom: 1;
+    padding-left: 8.69565%;
+    padding-right: 8.69565%;
+  }
+
+  section {
+    width: 47.36842%;
+    float: left;
+    margin-right: 5.26316%;
+    display: inline;
+  }
+  section#recent-ingests {
+    width: 47.36842%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -4em;
+    display: inline;
+  }
+}
